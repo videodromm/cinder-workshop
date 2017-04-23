@@ -41,7 +41,7 @@ require("spectacle/lib/themes/default/index.css");
 const images = {
   cinderlogo: require("../assets/cinder-logo.png"),
   logo: require("../assets/formidable-logo.svg"),
-  markdown: require("../assets/markdown.png"),
+  opengl: require("../assets/opengl.jpg"),
   webgl: require("../assets/webgl.jpg"),
   vdlogo: require("../assets/videodromm-logo.jpg"),
   neo: require("../assets/neo.jpg"),
@@ -110,10 +110,22 @@ export default class Presentation extends React.Component {
         
         <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
           <BlockQuote>
-            <Quote>Example Quote</Quote>
-            <Cite>Author</Cite>
+            <Quote>Cinder uses OpenGL to use the resources of the graphics card (GPU, memory).<br />
+						</Quote>
+            <Cite>CPU can be used for other tasks</Cite>
           </BlockQuote>
+          <Image width="70%" src={images.opengl}/>
         </Slide>
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+          <Heading size={6} textColor="secondary" caps>Installation Windows - Mac - Linux</Heading>
+          <List>
+            <ListItem>launch cmd (Win+R cmd) or terminal</ListItem>
+            <ListItem>cd Documents</ListItem>
+            <ListItem>git clone --recursive https://github.com/cinder/Cinder.git</ListItem>
+            <ListItem>cd Cinder</ListItem>
+          </List>
+        </Slide>
+        
       </Deck>
     );
   }

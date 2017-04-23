@@ -39,8 +39,7 @@ require("spectacle/lib/themes/default/index.css");
 
 
 const images = {
-  city: require("../assets/city.jpg"),
-  kat: require("../assets/kat.png"),
+  cinderlogo: require("../assets/cinder-logo.png"),
   logo: require("../assets/formidable-logo.svg"),
   markdown: require("../assets/markdown.png"),
   webgl: require("../assets/webgl.jpg"),
@@ -53,10 +52,10 @@ const images = {
 preloader(images);
 
 const theme = createTheme({
-  primary: "#857D41",
-  secondary: "#540804",
-  tertiary: "#03A9FC",
-  quartenary: "#CECECE"
+  primary: "black",
+  secondary: "orange",
+  tertiary: "yellow",
+  quartenary: "red"
 }, {
   primary: "Montserrat",
   secondary: "Helvetica"
@@ -68,31 +67,47 @@ export default class Presentation extends React.Component {
       <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
        
         <Slide transition={["zoom"]} bgColor="primary">
-          <Heading size={1} fit caps lineHeight={1} textColor="secondary">
-            Spectacle Boilerplate
-          </Heading>
-          <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
-            open the presentation/index.js file to get started
-          </Text>
-        </Slide>
-        <Slide transition={["fade"]} bgColor="tertiary">
-          <Heading size={6} textColor="primary" caps>Typography</Heading>
-          <Heading size={1} textColor="secondary">Heading 1</Heading>
-          <Heading size={2} textColor="secondary">Heading 2</Heading>
-          <Heading size={3} textColor="secondary">Heading 3</Heading>
-          <Heading size={4} textColor="secondary">Heading 4</Heading>
-          <Heading size={5} textColor="secondary">Heading 5</Heading>
-          <Text size={6} textColor="secondary">Standard text</Text>
+          <Heading size={5} fit caps lineHeight={1} textColor="secondary">Creative Coding with</Heading>
+            <Heading size={1} fit textColor="secondary">
+              <Link target="_new" href="http://libcinder.org">
+                <Text bold caps textColor="quartenary">Cinder</Text>
+              </Link>
+            </Heading>
+            <Link target="_new" href="https://www.facebook.com/batchass">
+              <Text bold textColor="tertiary">by Bruce LANE</Text>
+            </Link>
+            <Link target="_new" href="http://twitter.com/batchass">
+              <Text bold textColor="tertiary">@batchass</Text>
+            </Link>				
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Heading size={6} textColor="secondary" caps>Standard List</Heading>
+          
+          <Image width="70%" src={images.cinderlogo}/>
+					<Heading size={5} textColor="tertiary">
+						C++ framework for multimedia applications.
+				  </Heading>
+          <Heading size={6} textColor="secondary" caps>Developed by</Heading>
+            <Link target="_new" href="http://barbariangroup.com/">
+              <Text bold textColor="tertiary">The Barbarian Group, New-York, USA, </Text>
+            </Link>
+          <Text  textColor="tertiary">
+						Open sourced under the 
+					</Text>
+            <Link target="_new" href="http://oss-watch.ac.uk/resources/modbsd">
+              <Text bold textColor="tertiary">simplified BSD licence</Text>
+            </Link>				
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+          <Heading size={6} textColor="secondary" caps>It’s a C++ framework.</Heading>
           <List>
-            <ListItem>Item 1</ListItem>
-            <ListItem>Item 2</ListItem>
-            <ListItem>Item 3</ListItem>
-            <ListItem>Item 4</ListItem>
+            <ListItem>Maximum performance!</ListItem>
+            <ListItem>low level direct hardware access</ListItem>
+            <ListItem>multimedia (video, graphics, audio)</ListItem>
+            <ListItem>libraries for network, MIDI, OSC, etc.</ListItem>
+            <ListItem>40 years of C/C++ code</ListItem>
           </List>
         </Slide>
+        
         <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
           <BlockQuote>
             <Quote>Example Quote</Quote>

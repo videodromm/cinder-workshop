@@ -47,6 +47,8 @@ const images = {
   vdlogo: require("../assets/videodromm-logo.jpg"),
   neo: require("../assets/neo.jpg"),
   circle: require("../assets/circle.jpg"),
+  project: require("../assets/firstapp1.png"),
+  cinderloop: require("../assets/CinderLoop.png"),
   formidablelogo: require("../assets/formidable-logo.svg")
 };
 
@@ -81,8 +83,7 @@ export default class Presentation extends React.Component {
               <Text bold textColor="tertiary">@batchass</Text>
             </Link>				
         </Slide>
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">         
           <Image width="70%" src={images.cinderlogo}/>
 					<Heading size={5} textColor="tertiary">
 						C++ framework for multimedia applications.
@@ -189,6 +190,20 @@ export default class Presentation extends React.Component {
             <ListItem>src: .cpp files</ListItem>
             <ListItem>vc2013 or xCode: project files</ListItem>
           </List>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">         
+					<Heading size={5} textColor="tertiary">
+						RESULTING PROJECT
+				  </Heading>
+          <Image width="100%" src={images.project}/>
+         			
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">         
+					<Heading size={5} textColor="tertiary">
+						APPLICATION FLOW
+				  </Heading>
+          <Image width="100%" src={images.cinderloop}/>
+         			
         </Slide>
 
 

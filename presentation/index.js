@@ -202,10 +202,19 @@ export default class Presentation extends React.Component {
 					<Heading size={5} textColor="tertiary">
 						APPLICATION FLOW
 				  </Heading>
-          <Image width="100%" src={images.cinderloop}/>
+          <Image width="60%" src={images.cinderloop}/>
          			
         </Slide>
-
+        <CodeSlide
+            transition={[]}
+            lang="js"
+            code={require("raw-loader!../assets/example.frag")}
+            ranges={[
+              { loc: [0, 8], title: "BASIC DRAWING PRIMITIVES" },
+              { loc: [0, 1], title: "1.0f : f means float, double otherwise" },
+              { loc: [0, 1], note: "set drawing color" }
+            ]}
+          />
 
       </Deck>
     );

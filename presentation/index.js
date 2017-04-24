@@ -42,7 +42,8 @@ const images = {
   cinderlogo: require("../assets/cinder-logo.png"),
   logo: require("../assets/formidable-logo.svg"),
   opengl: require("../assets/opengl.jpg"),
-  webgl: require("../assets/webgl.jpg"),
+  tinderbox: require("../assets/tinderbox1.png"),
+  tinderboxb: require("../assets/tinderbox2.png"),
   vdlogo: require("../assets/videodromm-logo.jpg"),
   neo: require("../assets/neo.jpg"),
   circle: require("../assets/circle.jpg"),
@@ -97,7 +98,7 @@ export default class Presentation extends React.Component {
               <Text bold textColor="tertiary">simplified BSD licence</Text>
             </Link>				
         </Slide>
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+        <Slide transition={["slide"]} bgColor="primary" textColor="tertiary">
           <Heading size={6} textColor="secondary" caps>It’s a C++ framework.</Heading>
           <List>
             <ListItem>Maximum performance!</ListItem>
@@ -116,16 +117,81 @@ export default class Presentation extends React.Component {
           </BlockQuote>
           <Image width="70%" src={images.opengl}/>
         </Slide>
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+        <Slide transition={["zoom"]} bgColor="primary" textColor="tertiary">
           <Heading size={6} textColor="secondary" caps>Installation Windows - Mac - Linux</Heading>
           <List>
             <ListItem>launch cmd (Win+R cmd) or terminal</ListItem>
             <ListItem>cd Documents</ListItem>
-            <ListItem>git clone --recursive https://github.com/cinder/Cinder.git</ListItem>
+            <ListItem>git clone --recursive https://github.com/cinder/Cinder</ListItem>
             <ListItem>cd Cinder</ListItem>
           </List>
         </Slide>
-        
+        <Slide transition={["slide"]} bgColor="secondary" textColor="primary">
+          <Heading size={6} textColor="primary" caps>Cinder - compilation on windows</Heading>
+          <List>
+            <ListItem>Explorer: go to Cinder/proj/vc2015</ListItem>
+            <ListItem>open cinder.sln</ListItem>
+            <ListItem>build debug and release versions: cinder.lib is generated</ListItem>
+            <ListItem>Explorer: Cinder/samples/basicApp/vc2013</ListItem>
+            <ListItem>open basicApp.sln</ListItem>
+            <ListItem>run basicApp</ListItem>
+          </List>
+        </Slide>
+        <Slide transition={["zoom"]} bgColor="primary" textColor="tertiary">
+          <Heading size={6} textColor="secondary" caps>Cinder - compilation on mac</Heading>
+          <List>
+            <ListItem>terminal: go to Cinder/proj/xcode</ListItem>
+            <ListItem>run ./full_build.sh</ListItem>
+            <ListItem>cinder.a is generated</ListItem>
+            <ListItem>Finder: Cinder/samples/basicApp/xcode</ListItem>
+            <ListItem>open basicApp.xcodeproj</ListItem>
+            <ListItem>run basicApp</ListItem>
+          </List>
+        </Slide>
+        <Slide transition={["slide"]} bgColor="secondary" textColor="primary">
+          <Heading size={6} textColor="primary" caps>Cinder - compilation on linux</Heading>
+          <List>
+            <ListItem>terminal: go to Cinder/</ListItem>
+            <ListItem>mkdir build && cd build</ListItem>
+            <ListItem>cmake ..</ListItem>
+            <ListItem>make -j 8</ListItem>
+            <ListItem>cd samples/BasicApp/proj/cmake</ListItem>
+            <ListItem>mkdir build && cd build</ListItem>
+            <ListItem>cmake ..</ListItem>
+            <ListItem>make -j 8</ListItem>
+            <ListItem>run ./Debug/BasicApp/BasicApp</ListItem>
+          </List>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
+					<Heading size={5} textColor="tertiary">
+						FIRST PROJECT (WIN/MAC).
+				  </Heading>
+          <Text  textColor="primary">
+						Launch tools/Tinderbox and enter FirstCinderProject as project name. 
+					</Text>
+          <Image width="70%" src={images.tinderbox}/>
+        </Slide>        
+        <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
+					<Heading size={5} textColor="tertiary">
+						SELECT BLOCKS
+				  </Heading>
+          <Text  textColor="primary">
+						No need for blocks in this one, we click Finish. 
+					</Text>
+          <Image width="70%" src={images.tinderboxb}/>
+        </Slide>        
+        <Slide transition={["zoom"]} bgColor="primary" textColor="tertiary">
+          <Heading size={6} textColor="secondary" caps>FOLDER STRUCTURE</Heading>
+          <List>
+            <ListItem>assets: for images,etc. loadAsset("file.png") looks here (up to 5 parent folders)</ListItem>
+            <ListItem>resources: resources compiled in the app</ListItem>
+            <ListItem>include: .h header files</ListItem>
+            <ListItem>src: .cpp files</ListItem>
+            <ListItem>vc2013 or xCode: project files</ListItem>
+          </List>
+        </Slide>
+
+
       </Deck>
     );
   }

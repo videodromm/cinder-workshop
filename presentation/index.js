@@ -208,11 +208,25 @@ export default class Presentation extends React.Component {
         <CodeSlide
             transition={[]}
             lang="js"
-            code={require("raw-loader!../assets/example.frag")}
+            code={require("raw-loader!../assets/basic.cpp")}
             ranges={[
               { loc: [0, 8], title: "BASIC DRAWING PRIMITIVES" },
-              { loc: [0, 1], title: "1.0f : f means float, double otherwise" },
-              { loc: [0, 1], note: "set drawing color" }
+              { loc: [2, 3], note: "1.0f : f means float, double otherwise" },
+              { loc: [2, 3], note: "set drawing color: red, green, blue" },
+              { loc: [3, 4], note: "draw a filled ellipse" },
+              { loc: [0, 8], title: "Try it!" }
+            ]}
+          />
+        <CodeSlide
+            transition={[]}
+            lang="js"
+            code={require("raw-loader!../assets/fft.cpp")}
+            ranges={[
+              { loc: [24, 50], title: "Audio Input Analyzer" },
+              { loc: [17, 22], note: "private variables declaration" },
+              { loc: [27, 39], note: "setup fft size and enable audio in" },
+              { loc: [49, 56], note: "get spectrum and store it" },
+              { loc: [24, 58], title: "Demo" }
             ]}
           />
 

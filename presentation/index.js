@@ -42,7 +42,8 @@ const images = {
   circle: require("../assets/circle.jpg"),
   project: require("../assets/firstapp1.png"),
   cinderloop: require("../assets/CinderLoop.png"),
-  formidablelogo: require("../assets/formidable-logo.svg")
+  formidablelogo: require("../assets/formidable-logo.svg"),
+  hithere: require("../assets/hithere.jpg")
 };
 
 //preloader(images);
@@ -92,6 +93,9 @@ export default class Presentation extends React.Component {
               <Text bold textColor="tertiary">simplified BSD licence</Text>
             </Link>				
         </Slide>
+        <Slide bgColor="primary">
+          <Image src={images.hithere} width={800} />
+        </Slide>
         <Slide transition={["slide"]} bgColor="primary" textColor="tertiary">
           <Heading size={6} textColor="secondary" caps>It’s a C++ framework.</Heading>
           <List>
@@ -110,6 +114,10 @@ export default class Presentation extends React.Component {
             <Cite>CPU can be used for other tasks</Cite>
           </BlockQuote>
           <Image width="70%" src={images.opengl}/>
+        </Slide>
+
+        <Slide bgColor="primary">
+          <Image src={images.neo} width={800} />
         </Slide>
         <Slide transition={["zoom"]} bgColor="primary" textColor="tertiary">
           <Heading size={6} textColor="secondary" caps>Installation Windows - Mac - Linux</Heading>

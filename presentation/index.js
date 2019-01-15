@@ -3,39 +3,32 @@ import React from "react";
 
 // Import Spectacle Core tags
 import {
-  Appear,
   BlockQuote,
   Cite,
-  CodePane,
   Deck,
-  Fill,
   Heading,
   Image,
-  Layout,
   Link,
   ListItem,
   List,
-  Markdown,
   Quote,
   Slide,
-  Spectacle,
   Text
 } from "spectacle";
 
 // Import image preloader util
-import preloader from "spectacle/lib/utils/preloader";
+//import preloader from "spectacle/lib/utils/preloader";
 // codeslide from https://github.com/thejameskyle/spectacle-code-slide
 import CodeSlide from "spectacle-code-slide";
 
 // Import theme
-import createTheme from "spectacle/lib/themes/default";
-
+import createTheme from 'spectacle/lib/themes/default';
 // Import custom component
 import Interactive from "../assets/interactive";
 
 // Require CSS
 require("normalize.css");
-require("spectacle/lib/themes/default/index.css");
+//require("spectacle/lib/themes/default/index.css");
 
 
 const images = {
@@ -52,7 +45,7 @@ const images = {
   formidablelogo: require("../assets/formidable-logo.svg")
 };
 
-preloader(images);
+//preloader(images);
 
 const theme = createTheme({
   primary: "black",
